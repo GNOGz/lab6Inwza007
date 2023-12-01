@@ -2,22 +2,25 @@
 #include <cmath>
 using namespace std;
 double deg2rad(double deg){
-    return deg*180.0/M_PI;
+    return deg*M_PI/180.0;
 }
 double rad2deg(double rad){
-    return rad*M_PI/180.0;
+    return rad*180.0/M_PI;
 }
-double findXComponent(double vecX1,double degX1,double vecX2,double degX2){
-    return ;
+double findXComponent(double vecX1,double vecX2,double degX1,double degX2){
+    return vecX1*cos(degX1)+vecX2*cos(degX2) ;
 }
-double findYComponent(double vecY1,double degY1,double vecY2,double degY2){
-    return ;
+double findYComponent(double vecY1,double vecY2,double degY1,double degY2){
+    return vecY1*sin(degY1)+vecY2*sin(degY2);
 }
 double pythagoras(double xComp,double yComp){
     return sqrt(pow(xComp,2)+pow(yComp,2));
 }
-void showResult(){
-
+void showResult(double lenght,double angle){
+    cout << "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%" << endl;
+    cout << "Length of the resultant vector = " << lenght << endl;
+    cout << "Direction of the resultant vector (deg) = "<< angle<<endl;
+    cout << "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%";
 }
 
 int main(){
