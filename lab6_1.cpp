@@ -5,6 +5,6 @@ int main(){
     cout << "Enter an integer: ";
     cout << "#Even numbers = ";
     cout << "#Odd numbers = ";
-    cout << "posdakpoaskopdsp";
+    cout << "Hello world";
     return 0;
 }
